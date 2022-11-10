@@ -56,7 +56,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text("rrrr")
             MySootheApp()
         }
     }
@@ -65,7 +64,7 @@ class MainActivity : ComponentActivity() {
 // Step: Search bar - Modifiers
 @Composable
 fun SearchBar(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier // 전체 UI 동작 제어
 ) {
     TextField(
         value = "",
@@ -267,7 +266,7 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
 }
 
 // Step: MySoothe App - Scaffold
-@Composable
+@Composable //이걸로 Composable Function 만듬
 fun MySootheApp() {
     MySootheTheme {
         Scaffold(bottomBar = { SootheBottomNavigation() }
